@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="size_medum">12sp</dimen>
+    <dimen name="size_m_medum">14sp</dimen>
+    <dimen name="size_larg">20sp</dimen>
+    <dimen name="size_more_larg">40sp</dimen>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_more_small">4dp</dimen>
+    <dimen name="padding_larg">16dp</dimen>
+    <dimen name="padding_medum">12dp</dimen>
+
+    <dimen name="margin_mm_larg">20dp</dimen>
+    <dimen name="margin_m_larg">18dp</dimen>
+    <dimen name="margin_larg">16dp</dimen>
+    <dimen name="margin_medum">8dp</dimen>
+
+    <dimen name="dim32">32dp</dimen>
+    <dimen name="dim40">40dp</dimen>
+    <dimen name="dim30">30dp</dimen>
+    <dimen name="ele_image">12dp</dimen>
+    <dimen name="ele_text">8dp</dimen>
+    <dimen name="dim8">8dp</dimen>
+    <dimen name="dim12">12dp</dimen>
+
+</resources>

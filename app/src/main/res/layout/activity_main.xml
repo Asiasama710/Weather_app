@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imagebackground"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="@dimen/margin_larg"
+        android:layout_marginVertical="@dimen/margin_medum"
+        android:background="@drawable/search_background"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:hint="@string/enter_your_city"
+        android:textSize="@dimen/size_medum"
+        android:imeOptions="actionSearch"
+        android:maxLines="1"
+        android:padding="@dimen/padding_small"
+        android:paddingHorizontal="@dimen/padding_more_small"
+        android:singleLine="true"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="@dimen/margin_larg"
+        android:layout_marginTop="@dimen/margin_larg"
+        android:layout_marginEnd="@dimen/margin_larg"
+        android:alpha="0.7"
+        app:cardBackgroundColor="@color/primery_card_color"
+        app:cardCornerRadius="@dimen/dim12"
+        app:cardElevation="@dimen/dim8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_name">
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_mm_larg"
+        android:elevation="@dimen/ele_text"
+        android:text="@string/_0_c"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_more_larg"
+        app:layout_constraintBottom_toBottomOf="@+id/temp_image"
+        app:layout_constraintEnd_toStartOf="@+id/temp_image"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/temp_image" />
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:padding="@dimen/padding_larg"
+        android:text="@string/tody"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_larg"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:padding="@dimen/padding_larg"
+        android:text="@string/city"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_larg"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    <View
+        android:id="@+id/temp_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="@dimen/dim32"
+        android:background="@drawable/ic_temperature"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/ele_image"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+
+    <TextView
+        android:id="@+id/temp_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:paddingVertical="@dimen/padding_medum"
+        android:layout_marginHorizontal="@dimen/margin_m_larg"
+        android:text="@string/temp_mini"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_m_medum"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/temp_max"
+        app:layout_constraintTop_toTopOf="@+id/temp_max" />
+
+    <TextView
+        android:id="@+id/feel_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:text="@string/feel_like_0_c"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_m_medum"
+        app:layout_constraintStart_toStartOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_wind_speed"
+        android:layout_width="100dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="@dimen/dim40"
+        android:alpha="0.7"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dim8"
+        app:cardElevation="@dimen/dim8"
+        app:layout_constraintEnd_toStartOf="@+id/card_humidity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_humidity"
+        android:layout_width="100dp"
+        android:layout_height="128dp"
+        android:alpha="0.7"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dim8"
+        app:cardElevation="@dimen/dim8"
+        app:layout_constraintBottom_toBottomOf="@+id/card_wind_speed"
+        app:layout_constraintEnd_toStartOf="@+id/card_pressure"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/card_wind_speed"
+        app:layout_constraintTop_toTopOf="@+id/card_wind_speed" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_pressure"
+        android:layout_width="100dp"
+        android:layout_height="128dp"
+        android:alpha="0.7"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dim8"
+        app:cardElevation="@dimen/dim8"
+        app:layout_constraintBottom_toBottomOf="@+id/card_humidity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/card_humidity"
+        app:layout_constraintTop_toTopOf="@+id/card_humidity" />
+
+    <View
+        android:id="@+id/image_wind"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/margin_larg"
+        android:background="@drawable/ic_wind"
+        android:backgroundTint="@color/dark_blue"
+        android:elevation="@dimen/ele_image"
+        app:layout_constraintEnd_toEndOf="@+id/card_wind_speed"
+        app:layout_constraintStart_toStartOf="@+id/card_wind_speed"
+        app:layout_constraintTop_toTopOf="@+id/card_wind_speed" />
+
+    <TextView
+        android:id="@+id/wind_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:text="@string/wind"
+        android:textColor="@color/gray_color"
+        android:textSize="@dimen/size_m_medum"
+        app:layout_constraintEnd_toEndOf="@+id/image_wind"
+        app:layout_constraintStart_toStartOf="@+id/image_wind"
+        app:layout_constraintTop_toBottomOf="@+id/image_wind" />
+
+    <TextView
+        android:id="@+id/humidity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:text="@string/humidity"
+        android:textColor="@color/gray_color"
+        android:textSize="@dimen/size_m_medum"
+        app:layout_constraintEnd_toEndOf="@+id/image_humidity"
+        app:layout_constraintStart_toStartOf="@+id/image_humidity"
+        app:layout_constraintTop_toBottomOf="@+id/image_humidity" />
+
+    <TextView
+        android:id="@+id/humidity_label_valu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:text="@string/_0"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/size_m_medum"
+        app:layout_constraintEnd_toEndOf="@+id/humidity_label"
+        app:layout_constraintStart_toStartOf="@+id/humidity_label"
+        app:layout_constraintTop_toBottomOf="@+id/humidity_label" />
+
+    <View
+        android:id="@+id/image_humidity"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/margin_larg"
+        android:background="@drawable/ic_humidity"
+        android:backgroundTint="@color/dark_blue"
+        android:elevation="@dimen/ele_image"
+        app:layout_constraintEnd_toEndOf="@+id/card_humidity"
+        app:layout_constraintStart_toStartOf="@+id/card_humidity"
+        app:layout_constraintTop_toTopOf="@+id/card_humidity" />
+
+    <TextView
+        android:id="@+id/wind_label_valu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:text="@string/_0_m_s"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/size_m_medum"
+        app:layout_constraintEnd_toEndOf="@+id/wind_label"
+        app:layout_constraintStart_toStartOf="@+id/wind_label"
+        app:layout_constraintTop_toBottomOf="@+id/wind_label" />
+
+    <TextView
+        android:id="@+id/pressure_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:text="Pressure"
+        android:textColor="@color/gray_color"
+        android:textSize="@dimen/size_m_medum"
+        app:layout_constraintEnd_toEndOf="@+id/image_pressure"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="@+id/image_pressure"
+        app:layout_constraintTop_toBottomOf="@+id/image_pressure" />
+
+    <TextView
+        android:id="@+id/pressure_label_valu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:text="@string/_0_hpa"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/size_m_medum"
+        app:layout_constraintEnd_toEndOf="@+id/pressure_label"
+        app:layout_constraintStart_toStartOf="@+id/pressure_label"
+        app:layout_constraintTop_toBottomOf="@+id/pressure_label" />
+
+    <View
+        android:id="@+id/image_pressure"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/margin_m_larg"
+        android:background="@drawable/ic_pressure"
+        android:backgroundTint="@color/dark_blue"
+        android:elevation="@dimen/ele_image"
+        app:layout_constraintEnd_toEndOf="@+id/card_pressure"
+        app:layout_constraintStart_toStartOf="@+id/card_pressure"
+        app:layout_constraintTop_toTopOf="@+id/card_pressure" />
+
+    <TextView
+        android:id="@+id/temp_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ele_text"
+        android:paddingVertical="@dimen/padding_medum"
+app:layout_constraintHorizontal_chainStyle="spread"
+        android:text="Temp max :"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_m_medum"
+android:layout_marginHorizontal="@dimen/margin_m_larg"
+        android:layout_marginBottom="@dimen/dim30"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toStartOf="@+id/temp_min"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/cardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

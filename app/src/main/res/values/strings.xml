@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Weather app</string>
+    <string name="enter_your_city">Enter your City</string>
+    <string name="_0_hpa">0 hpa</string>
+    <string name="_0_m_s">0 m/s</string>
+    <string name="_0">0%</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="city">City</string>
+    <string name="temp_mini">Temp mini :</string>
+    <string name="feel_like_0_c">feel like : 0°C</string>
+    <string name="tody">Tody</string>
+    <string name="_0_c">0°C</string>
+</resources>
