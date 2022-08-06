@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         makeRequestUsingOKHTTP("iraq")
 
-        binding.inputName.setOnEditorActionListener { v, actionId, event ->
+        binding.inputName.setOnEditorActionListener { _, actionId, _ ->
             if(actionId == EditorInfo.IME_ACTION_SEARCH){
                 makeRequestUsingOKHTTP(binding.inputName.text.toString())
                 true
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         client.newCall(request).enqueue(object:Callback{
             override fun onFailure(call: Call, e: IOException) {
-               Log.i("F","fail:${e.message}")
+               Log.i("Fail","fail:${e.message}")
             }
 
 
